@@ -17,3 +17,6 @@
 # Windows files
 Thumbs.db
 desktop.ini
+
+# Python virtualenv
+venv/

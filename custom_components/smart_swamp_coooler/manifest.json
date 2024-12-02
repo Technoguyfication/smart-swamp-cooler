@@ -1,0 +1,12 @@
+{
+    "domain": "smart_swamp_cooler",
+    "name": "Smart Swamp Cooler",
+    "version": "1.0.0",
+    "config_flow": true,
+    "requirements": [],
+    "dependencies": [],
+    "codeowners": [
+        "@Technoguyfication"
+    ],
+    "documentation": "https://github.com/Technoguyfication/smart-swamp-cooler"
+}

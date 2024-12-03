@@ -63,7 +63,7 @@ class SwampCoolerPump(SwitchEntity):
         try:
             response = requests.get(f"http://{self._ip_address}/api/cooler").json()
             pump_state = response.get("pump")
-            self._state = pump_state == "on"
+            self._state = pump_state == "ON"
         except requests.RequestException as e:
             raise HomeAssistantError from e
 

@@ -1,3 +1,4 @@
+from typing import Any
 from homeassistant.components.switch import SwitchEntity
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant, HomeAssistantError
@@ -41,6 +42,12 @@ class SwampCoolerPump(SwitchEntity):
     @property
     def is_on(self):
         return self._state
+    
+    def turn_on(self):
+        self.set_state(True)
+    
+    def turn_off(self):
+        self.set_state(False)
 
     def set_state(self, state: bool):
         try:

@@ -66,4 +66,7 @@ class SwampCoolerPump(SwitchEntity):
             self._state = pump_state == "ON"
         except requests.RequestException as e:
             raise HomeAssistantError from e
-
+    
+    async def async_added_to_hass(self) -> None:
+        # force an update so we get the correct entity state immediately
+        await self.async_update_ha_state(force_refresh=True)

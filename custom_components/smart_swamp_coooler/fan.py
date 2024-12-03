@@ -25,8 +25,6 @@ class SwampCoolerFan(FanEntity):
 
         self._state = None
 
-        self.update()
-
     @property
     def name(self):
         return "Swamp Cooler Fan"

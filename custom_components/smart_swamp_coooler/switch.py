@@ -21,8 +21,6 @@ class SwampCoolerPump(SwitchEntity):
 
         self._state = None
 
-        self.update()
-
     @property
     def name(self):
         return "Swamp Cooler Pump"

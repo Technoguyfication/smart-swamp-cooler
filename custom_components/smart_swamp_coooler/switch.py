@@ -43,6 +43,11 @@ class SwampCoolerPump(SwitchEntity):
     def is_on(self):
         return self._state
     
+    @property
+    def icon(self) -> str | None:
+        # Use normal pump icon when pump is running, otherwise use pump-off icon
+        return "mdi:pump" if self._state else "mdi:pump-off"
+    
     def turn_on(self):
         self.set_state(True)
     
